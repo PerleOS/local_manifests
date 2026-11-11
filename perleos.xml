@@ -18,6 +18,10 @@
   <project path="device/lenovo/pearl-common" name="android_device_lenovo_pearl-common" remote="perleos" />
   <project path="device/lenovo/j706f" name="android_device_lenovo_j706f" remote="perleos" />
 
+  <!-- Product: branding overlay on top of vendor/lineage, microG prebuilts -->
+  <project path="vendor/perleos" name="android_vendor_perleos" remote="perleos" />
+  <project path="vendor/microg" name="android_vendor_microg" remote="perleos" />
+
   <!--
     Not listed yet:
     - kernel/lenovo/sm6150 (android_kernel_lenovo_sm6150): phase 1 boots the stock prebuilt
