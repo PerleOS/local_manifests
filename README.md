@@ -20,13 +20,14 @@ To update, run `git -C .repo/local_manifests pull` and then `repo sync` again.
 |---|---|---|
 | `device/lenovo/pearl-common` | `android_device_lenovo_pearl-common` | Tree shared by the pearl family (TB-J706F, TB-J706L) |
 | `device/lenovo/j706f` | `android_device_lenovo_j706f` | TB-J706F (Wi-Fi, ROW) device tree |
-| `vendor/perleos` | `android_vendor_perleos` | PerleOS branding on top of `vendor/lineage` |
-| `vendor/microg` | `android_vendor_microg` | microG prebuilts and permissions |
+| `packages/modules/Connectivity` | `android_packages_modules_Connectivity` | Fork of the LineageOS project: BPF loader and network stack fixes for the stock 4.14 kernel |
+| `system/bpf` | `android_system_bpf` | Fork of the LineageOS project: BPF loader fix for the stock 4.14 kernel |
 
 All projects track branch `lineage-21.0`.
 
 Not included:
 
+- **Branding and microG** (`vendor/perleos`, `vendor/microg`): not created yet.
 - **Kernel** (`kernel/lenovo/sm6150`): the first builds boot the stock prebuilt kernel. The kernel is added once it is built from source.
 - **Proprietary files** (`vendor/lenovo/*`): these repositories are private. On a machine with access, put a second file such as `.repo/local_manifests/private.xml` next to `perleos.xml`. It should use the `private` remote that the LineageOS manifest already defines.
 
