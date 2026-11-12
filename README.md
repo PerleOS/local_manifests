@@ -1,7 +1,12 @@
+<!--
+SPDX-FileCopyrightText: The PerleOS Project
+SPDX-License-Identifier: Apache-2.0
+-->
+
 # PerleOS local manifests
 
 `repo` local manifests that add the PerleOS repositories to a LineageOS 21 checkout, for the Lenovo Tab P11 Pro TB-J706F (`j706f`).
-The LineageOS manifest is used unchanged. Only the repositories PerleOS owns are listed here, so nothing upstream is forked.
+The LineageOS manifest is used unchanged, except for two LineageOS projects that are replaced by PerleOS forks (see Contents).
 
 ## Use
 
