@@ -33,14 +33,15 @@
   <project path="device/lenovo/pearl-common" name="android_device_lenovo_pearl-common" remote="perleos" />
   <project path="device/lenovo/j706f" name="android_device_lenovo_j706f" remote="perleos" />
 
+  <!-- Kernel (fork of HK4567/android_kernel_lenovo_sm7150) -->
+  <project path="kernel/lenovo/sm6150" name="android_kernel_lenovo_sm6150" remote="perleos" />
+
   <!-- Product configuration and microG -->
   <project path="vendor/perleos" name="android_vendor_perleos" remote="perleos" />
   <project path="vendor/microg" name="android_vendor_microg" remote="perleos" />
 
   <!--
     Not listed yet:
-    - kernel/lenovo/sm6150 (android_kernel_lenovo_sm6150): phase 1 boots the stock prebuilt
-      kernel; added when the inline-kernel phase starts.
     - vendor/lenovo/pearl-common, vendor/lenovo/j706f (proprietary_vendor_lenovo_*): private
       blob repositories, kept in a separate local manifest on machines that have access,
       through the upstream "private" remote (ssh://git@github.com).
