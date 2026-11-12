@@ -5,7 +5,8 @@
 
   PerleOS repositories added on top of the LineageOS manifest
   (repo init -u https://github.com/LineageOS/android -b lineage-21.0).
-  Upstream projects are used unchanged and are not listed here.
+  Upstream projects are used unchanged and are not listed here, except the
+  forks below.
 -->
 <manifest>
 
@@ -13,6 +14,16 @@
   <remote name="perleos"
           fetch="https://github.com/PerleOS"
           revision="refs/heads/lineage-21.0" />
+
+  <!--
+    Forks of LineageOS projects. The stock 4.14 kernel lacks BPF object names
+    and per-file bpffs labels; these forks make the BPF loaders and
+    ClatCoordinator work without them. Rebased on each LineageOS security merge.
+  -->
+  <remove-project name="LineageOS/android_packages_modules_Connectivity" />
+  <project path="packages/modules/Connectivity" name="android_packages_modules_Connectivity" remote="perleos" groups="pdk-cw-fs,pdk-fs" />
+  <remove-project name="LineageOS/android_system_bpf" />
+  <project path="system/bpf" name="android_system_bpf" remote="perleos" groups="pdk" />
 
   <!-- Device trees -->
   <project path="device/lenovo/pearl-common" name="android_device_lenovo_pearl-common" remote="perleos" />
