@@ -6,7 +6,7 @@ SPDX-License-Identifier: Apache-2.0
 # PerleOS local manifests
 
 `repo` local manifests that add the PerleOS repositories to a LineageOS 21 checkout, for the Lenovo Tab P11 Pro TB-J706F (`j706f`).
-The LineageOS manifest is used unchanged, except for two LineageOS projects that are replaced by PerleOS forks (see Contents).
+The LineageOS manifest is used unchanged, except for the LineageOS projects that PerleOS forks replace (see Contents).
 
 ## Use
 
@@ -27,13 +27,16 @@ To update, run `git -C .repo/local_manifests pull` and then `repo sync` again.
 | `device/lenovo/j706f` | `android_device_lenovo_j706f` | TB-J706F (Wi-Fi, ROW) device tree |
 | `packages/modules/Connectivity` | `android_packages_modules_Connectivity` | Fork of the LineageOS project: BPF loader and network stack fixes for the stock 4.14 kernel |
 | `system/bpf` | `android_system_bpf` | Fork of the LineageOS project: BPF loader fix for the stock 4.14 kernel |
+| `frameworks/base` | `android_frameworks_base` | Fork of the LineageOS project: microG signature spoofing on user builds |
+| `packages/overlays/Lineage` | `android_packages_overlays_Lineage` | Fork of the LineageOS project: declares the Space Grotesk font family |
+| `kernel/lenovo/sm6150` | `android_kernel_lenovo_sm6150` | Kernel source |
+| `vendor/perleos` | `android_vendor_perleos` | PerleOS product configuration and branding |
+| `vendor/microg` | `android_vendor_microg` | microG and F-Droid prebuilts |
 
 All projects track branch `lineage-21.0`.
 
 Not included:
 
-- **Branding and microG** (`vendor/perleos`, `vendor/microg`): not created yet.
-- **Kernel** (`kernel/lenovo/sm6150`): the first builds boot the stock prebuilt kernel. The kernel is added once it is built from source.
 - **Proprietary files** (`vendor/lenovo/*`): these repositories are private. On a machine with access, put a second file such as `.repo/local_manifests/private.xml` next to `perleos.xml`. It should use the `private` remote that the LineageOS manifest already defines.
 
 ## Why not `breakfast` / roomservice
