@@ -39,6 +39,10 @@
   <remove-project name="LineageOS/android_packages_modules_Bluetooth" />
   <project path="packages/modules/Bluetooth" name="android_packages_modules_Bluetooth" remote="perleos" groups="pdk" />
 
+  <!-- Fork of packages/apps/Trebuchet: AOSP fix for the Recents grid dismissal crash. -->
+  <remove-project name="LineageOS/android_packages_apps_Trebuchet" />
+  <project path="packages/apps/Trebuchet" name="android_packages_apps_Trebuchet" remote="perleos" groups="pdk-fs,sysui-studio" />
+
   <!-- Device trees -->
   <project path="device/lenovo/pearl-common" name="android_device_lenovo_pearl-common" remote="perleos" />
   <project path="device/lenovo/j706f" name="android_device_lenovo_j706f" remote="perleos" />

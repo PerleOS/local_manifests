@@ -30,6 +30,7 @@ To update, run `git -C .repo/local_manifests pull` and then `repo sync` again.
 | `frameworks/base` | `android_frameworks_base` | Fork of the LineageOS project: microG signature spoofing on user builds |
 | `packages/overlays/Lineage` | `android_packages_overlays_Lineage` | Fork of the LineageOS project: declares the Space Grotesk font family |
 | `packages/modules/Bluetooth` | `android_packages_modules_Bluetooth` | Fork of the LineageOS project: LE connection fix for the WCN3990 Bluetooth controller |
+| `packages/apps/Trebuchet` | `android_packages_apps_Trebuchet` | Fork of the LineageOS project: AOSP fix for a Recents crash on tablets |
 | `kernel/lenovo/sm6150` | `android_kernel_lenovo_sm6150` | Kernel source |
 | `vendor/perleos` | `android_vendor_perleos` | PerleOS product configuration and branding |
 | `vendor/microg` | `android_vendor_microg` | microG and F-Droid prebuilts |
