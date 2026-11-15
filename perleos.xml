@@ -48,6 +48,11 @@
   <remove-project name="LineageOS/android_packages_apps_Aperture" />
   <project path="packages/apps/Aperture" name="android_packages_apps_Aperture" remote="perleos" />
 
+  <!-- Fork of packages/apps/ThemePicker: icon pack, icon shape and font previews fit on
+       landscape tablets. -->
+  <remove-project name="LineageOS/android_packages_apps_ThemePicker" />
+  <project path="packages/apps/ThemePicker" name="android_packages_apps_ThemePicker" remote="perleos" groups="pdk-fs" />
+
   <!-- Device trees -->
   <project path="device/lenovo/pearl-common" name="android_device_lenovo_pearl-common" remote="perleos" />
   <project path="device/lenovo/j706f" name="android_device_lenovo_j706f" remote="perleos" />

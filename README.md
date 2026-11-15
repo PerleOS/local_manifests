@@ -32,6 +32,7 @@ To update, run `git -C .repo/local_manifests pull` and then `repo sync` again.
 | `packages/modules/Bluetooth` | `android_packages_modules_Bluetooth` | Fork of the LineageOS project: LE connection fix for the WCN3990 Bluetooth controller |
 | `packages/apps/Trebuchet` | `android_packages_apps_Trebuchet` | Fork of the LineageOS project: AOSP fix for a Recents crash on tablets |
 | `packages/apps/Aperture` | `android_packages_apps_Aperture` | Fork of the LineageOS project: camera access toggle handling for the stock camera HAL |
+| `packages/apps/ThemePicker` | `android_packages_apps_ThemePicker` | Fork of the LineageOS project: icon pack, icon shape and font previews on landscape tablets |
 | `kernel/lenovo/sm6150` | `android_kernel_lenovo_sm6150` | Kernel source |
 | `vendor/perleos` | `android_vendor_perleos` | PerleOS product configuration and branding |
 | `vendor/microg` | `android_vendor_microg` | microG and F-Droid prebuilts |
