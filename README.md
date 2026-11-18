@@ -25,8 +25,6 @@ To update, run `git -C .repo/local_manifests pull` and then `repo sync` again.
 |---|---|---|
 | `device/lenovo/pearl-common` | `android_device_lenovo_pearl-common` | Tree shared by the pearl family (TB-J706F, TB-J706L) |
 | `device/lenovo/j706f` | `android_device_lenovo_j706f` | TB-J706F (Wi-Fi, ROW) device tree |
-| `packages/modules/Connectivity` | `android_packages_modules_Connectivity` | Fork of the LineageOS project: BPF loader and network stack fixes for the stock 4.14 kernel |
-| `system/bpf` | `android_system_bpf` | Fork of the LineageOS project: BPF loader fix for the stock 4.14 kernel |
 | `frameworks/base` | `android_frameworks_base` | Fork of the LineageOS project: microG signature spoofing on user builds |
 | `packages/overlays/Lineage` | `android_packages_overlays_Lineage` | Fork of the LineageOS project: declares the Space Grotesk font family |
 | `packages/modules/Bluetooth` | `android_packages_modules_Bluetooth` | Fork of the LineageOS project: LE connection fix for the WCN3990 Bluetooth controller |
