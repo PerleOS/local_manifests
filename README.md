@@ -34,12 +34,11 @@ To update, run `git -C .repo/local_manifests pull` and then `repo sync` again.
 | `kernel/lenovo/sm6150` | `android_kernel_lenovo_sm6150` | Kernel source |
 | `vendor/perleos` | `android_vendor_perleos` | PerleOS product configuration and branding |
 | `vendor/microg` | `android_vendor_microg` | microG and F-Droid prebuilts |
+| `vendor/lenovo/pearl-common` | `proprietary_vendor_lenovo_pearl-common` (ThePackrats) | Proprietary files of the pearl family, from the stock S620150 ROW firmware |
 
 All projects track branch `lineage-21.0`.
 
-Not included:
-
-- **Proprietary files** (`vendor/lenovo/*`): these repositories are private. On a machine with access, put a second file such as `.repo/local_manifests/private.xml` next to `perleos.xml`. It should use the `private` remote that the LineageOS manifest already defines.
+The proprietary files (`vendor/lenovo/*`) come from the [ThePackrats](https://github.com/ThePackrats) organization, mirrored at https://gitlab.com/ThePackrats. Those repositories hold only the output of the device tree's `extract-files.sh` run on the stock S620150 ROW firmware, and can be rebuilt from it.
 
 ## Why not `breakfast` / roomservice
 
