@@ -11,8 +11,8 @@ The LineageOS manifest is used unchanged, except for the LineageOS projects that
 ## Use
 
 ```sh
-repo init -u https://github.com/LineageOS/android -b lineage-21.0 --git-lfs --depth=1
-git clone -b lineage-21.0 https://github.com/PerleOS/local_manifests .repo/local_manifests
+repo init -u https://github.com/LineageOS/android -b lineage-24.0 --git-lfs --depth=1
+git clone -b lineage-24.0 https://github.com/PerleOS/local_manifests .repo/local_manifests
 repo sync -c --no-tags --optimized-fetch
 ```
 
@@ -25,20 +25,15 @@ To update, run `git -C .repo/local_manifests pull` and then `repo sync` again.
 |---|---|---|
 | `device/lenovo/pearl-common` | `android_device_lenovo_pearl-common` | Tree shared by the pearl family (TB-J706F, TB-J706L) |
 | `device/lenovo/j706f` | `android_device_lenovo_j706f` | TB-J706F (Wi-Fi, ROW) device tree |
-| `frameworks/base` | `android_frameworks_base` | Fork of the LineageOS project: microG signature spoofing on user builds |
-| `packages/overlays/Lineage` | `android_packages_overlays_Lineage` | Fork of the LineageOS project: declares the Space Grotesk font family |
-| `packages/modules/Bluetooth` | `android_packages_modules_Bluetooth` | Fork of the LineageOS project: LE connection fix for the WCN3990 Bluetooth controller |
-| `packages/apps/Trebuchet` | `android_packages_apps_Trebuchet` | Fork of the LineageOS project: AOSP fix for a Recents crash on tablets |
-| `packages/apps/Aperture` | `android_packages_apps_Aperture` | Fork of the LineageOS project: camera access toggle handling for the stock camera HAL |
-| `packages/apps/ThemePicker` | `android_packages_apps_ThemePicker` | Fork of the LineageOS project: icon pack, icon shape and font previews on landscape tablets |
 | `kernel/lenovo/sm6150` | `android_kernel_lenovo_sm6150` | Kernel source |
+| `prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9` | `LineageOS/android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-4.9` (`lineage-19.1`) | GNU binutils for the kernel, no longer in the LineageOS 24.0 manifest |
 | `vendor/perleos` | `android_vendor_perleos` | PerleOS product configuration and branding |
 | `vendor/microg` | `android_vendor_microg` | microG and F-Droid prebuilts |
 | `vendor/lenovo/pearl-common` | `proprietary_vendor_lenovo_pearl-common` (ThePackrats) | Proprietary files of the pearl family, from the stock S620150 ROW firmware |
 
-All projects track branch `lineage-21.0`.
+The PerleOS and ThePackrats projects track branch `lineage-24.0`. The forks of the `lineage-21.0` branch are not ported yet.
 
-The proprietary files (`vendor/lenovo/*`) come from the [ThePackrats](https://github.com/ThePackrats) organization, mirrored at https://gitlab.com/ThePackrats. Those repositories hold only the output of the device tree's `extract-files.sh` run on the stock S620150 ROW firmware, and can be rebuilt from it.
+The proprietary files (`vendor/lenovo/*`) come from the [ThePackrats](https://github.com/ThePackrats) organization, mirrored at https://gitlab.com/ThePackrats. Those repositories hold only the output of the device tree's `extract-files.py` run on the stock S620150 ROW firmware, and can be rebuilt from it.
 
 ## Why not `breakfast` / roomservice
 
