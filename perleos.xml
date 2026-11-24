@@ -15,7 +15,8 @@
           fetch="https://github.com/PerleOS"
           revision="refs/heads/lineage-24.0" />
 
-  <!-- Fork of frameworks/base: LineageOS's restricted microG signature spoof on user builds. -->
+  <!-- Fork of frameworks/base: LineageOS's restricted microG signature spoof on user builds,
+       and a fix for a SystemUI crash when a desktop windowing desk is already removed. -->
   <remove-project name="LineageOS/android_frameworks_base" />
   <project path="frameworks/base" name="android_frameworks_base" remote="perleos" groups="pdk-cw-fs,pdk-fs,sysui-studio" />
 
@@ -29,8 +30,8 @@
   <remove-project name="LineageOS/android_packages_apps_Aperture" />
   <project path="packages/apps/Aperture" name="android_packages_apps_Aperture" remote="perleos" />
 
-  <!-- GNU binutils 2.27 for the kernel, built as the stock kernel so that the stock vendor
-       modules keep loading; the lineage-24.0 manifest no longer has it -->
+  <!-- GNU binutils 2.27 for the kernel, as used for the stock kernel; the lineage-24.0
+       manifest no longer has it -->
   <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9"
            name="LineageOS/android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-4.9"
            remote="github" revision="refs/heads/lineage-19.1" clone-depth="1" groups="pdk,linux,arm" />
@@ -46,8 +47,8 @@
   <project path="vendor/perleos" name="android_vendor_perleos" remote="perleos" />
   <project path="vendor/microg" name="android_vendor_microg" remote="perleos" />
 
-  <!-- Proprietary files, extracted unedited from the stock S620150 ROW firmware by the
-       device tree's extract-files.py; hosted outside the PerleOS organization. -->
+  <!-- Proprietary files, extracted from the stock S620150 ROW firmware by the device tree's
+       extract-files.py (with its fixups); hosted outside the PerleOS organization. -->
   <remote name="packrats"
           fetch="https://github.com/ThePackrats"
           revision="refs/heads/lineage-24.0" />
