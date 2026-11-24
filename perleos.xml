@@ -5,8 +5,8 @@
 
   PerleOS repositories added on top of the LineageOS manifest
   (repo init -u https://github.com/LineageOS/android -b lineage-24.0).
-  Upstream projects are used unchanged and are not listed here. The forks of
-  lineage-21.0 are added back as they are ported.
+  Upstream projects are used unchanged and are not listed here, except the
+  forks below.
 -->
 <manifest>
 
@@ -14,6 +14,20 @@
   <remote name="perleos"
           fetch="https://github.com/PerleOS"
           revision="refs/heads/lineage-24.0" />
+
+  <!-- Fork of frameworks/base: LineageOS's restricted microG signature spoof on user builds. -->
+  <remove-project name="LineageOS/android_frameworks_base" />
+  <project path="frameworks/base" name="android_frameworks_base" remote="perleos" groups="pdk-cw-fs,pdk-fs,sysui-studio" />
+
+  <!-- Fork of packages/modules/Bluetooth: legacy LE Create Connection on controllers without
+       LE Extended Advertising (WCN3990 rejects the extended command it advertises). -->
+  <remove-project name="LineageOS/android_packages_modules_Bluetooth" />
+  <project path="packages/modules/Bluetooth" name="android_packages_modules_Bluetooth" remote="perleos" groups="pdk" />
+
+  <!-- Fork of packages/apps/Aperture: stays open when the camera access toggle blocks the
+       camera, and binds it again once unblocked (the stock camera HAL has no camera mute). -->
+  <remove-project name="LineageOS/android_packages_apps_Aperture" />
+  <project path="packages/apps/Aperture" name="android_packages_apps_Aperture" remote="perleos" />
 
   <!-- GNU binutils 2.27 for the kernel, built as the stock kernel so that the stock vendor
        modules keep loading; the lineage-24.0 manifest no longer has it -->

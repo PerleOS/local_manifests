@@ -25,13 +25,16 @@ To update, run `git -C .repo/local_manifests pull` and then `repo sync` again.
 |---|---|---|
 | `device/lenovo/pearl-common` | `android_device_lenovo_pearl-common` | Tree shared by the pearl family (TB-J706F, TB-J706L) |
 | `device/lenovo/j706f` | `android_device_lenovo_j706f` | TB-J706F (Wi-Fi, ROW) device tree |
+| `frameworks/base` | `android_frameworks_base` | Fork of the LineageOS project: microG signature spoofing on user builds |
+| `packages/modules/Bluetooth` | `android_packages_modules_Bluetooth` | Fork of the LineageOS project: LE connection fix for the WCN3990 Bluetooth controller |
+| `packages/apps/Aperture` | `android_packages_apps_Aperture` | Fork of the LineageOS project: camera access toggle handling for the stock camera HAL |
 | `kernel/lenovo/sm6150` | `android_kernel_lenovo_sm6150` | Kernel source |
 | `prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9` | `LineageOS/android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-4.9` (`lineage-19.1`) | GNU binutils for the kernel, no longer in the LineageOS 24.0 manifest |
 | `vendor/perleos` | `android_vendor_perleos` | PerleOS product configuration and branding |
 | `vendor/microg` | `android_vendor_microg` | microG and F-Droid prebuilts |
 | `vendor/lenovo/pearl-common` | `proprietary_vendor_lenovo_pearl-common` (ThePackrats) | Proprietary files of the pearl family, from the stock S620150 ROW firmware |
 
-The PerleOS and ThePackrats projects track branch `lineage-24.0`. The forks of the `lineage-21.0` branch are not ported yet.
+The PerleOS and ThePackrats projects track branch `lineage-24.0`. The `lineage-21.0` forks of `packages/overlays/Lineage`, `packages/apps/Trebuchet` and `packages/apps/ThemePicker` have no `lineage-24.0` branch: 24.0 uses those projects unchanged.
 
 The proprietary files (`vendor/lenovo/*`) come from the [ThePackrats](https://github.com/ThePackrats) organization, mirrored at https://gitlab.com/ThePackrats. Those repositories hold only the output of the device tree's `extract-files.py` run on the stock S620150 ROW firmware, and can be rebuilt from it.
 
