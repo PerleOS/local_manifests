@@ -29,7 +29,6 @@ To update, run `git -C .repo/local_manifests pull` and then `repo sync` again.
 | `packages/modules/Bluetooth` | `android_packages_modules_Bluetooth` | Fork of the LineageOS project: LE connection fix for the WCN3990 Bluetooth controller |
 | `packages/apps/Aperture` | `android_packages_apps_Aperture` | Fork of the LineageOS project: camera access toggle handling for the stock camera HAL |
 | `kernel/lenovo/sm6150` | `android_kernel_lenovo_sm6150` | Kernel source |
-| `prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9` | `LineageOS/android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-4.9` (`lineage-19.1`) | GNU binutils for the kernel, no longer in the LineageOS 24.0 manifest |
 | `vendor/perleos` | `android_vendor_perleos` | PerleOS product configuration and branding |
 | `vendor/microg` | `android_vendor_microg` | microG and F-Droid prebuilts |
 | `vendor/lenovo/pearl-common` | `proprietary_vendor_lenovo_pearl-common` (ThePackrats) | Proprietary files of the pearl family, from the stock S620150 ROW firmware |

@@ -30,12 +30,6 @@
   <remove-project name="LineageOS/android_packages_apps_Aperture" />
   <project path="packages/apps/Aperture" name="android_packages_apps_Aperture" remote="perleos" />
 
-  <!-- GNU binutils 2.27 for the kernel, as used for the stock kernel; the lineage-24.0
-       manifest no longer has it -->
-  <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9"
-           name="LineageOS/android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-4.9"
-           remote="github" revision="refs/heads/lineage-19.1" clone-depth="1" groups="pdk,linux,arm" />
-
   <!-- Device trees -->
   <project path="device/lenovo/pearl-common" name="android_device_lenovo_pearl-common" remote="perleos" />
   <project path="device/lenovo/j706f" name="android_device_lenovo_j706f" remote="perleos" />
